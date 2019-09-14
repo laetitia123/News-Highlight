@@ -5,9 +5,9 @@
 <div class="container">
     <div class="row">
         {%for article in articles %}
-        <div class="col-md-">
+        <div class="col-md-4">
             <div class="thumbnail">
-            <h3>{{ article.title }}</h3>
+             <h3>{{ article.title }}</h3>
 
             <p class="overview"> {{article.description}}</p>
             <p><img src="{{article.urlToImage}}"class="img-fluid"s></p>
