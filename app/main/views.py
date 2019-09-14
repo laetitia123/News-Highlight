@@ -25,35 +25,37 @@
 #     sources = get_source(source)
 #     print(sources)
 #     title = 'Home - Welcome to The best Movie Review Website Online'
-#     return render_template('index.html', title = title,source=sources)    
+#     return render_template('index.html', title = title,source=sources)
 
-     
-from flask import render_template,request,redirect,url_for
+
+from flask import render_template, request, redirect, url_for
 from . import main
-from ..requests import get_sources,get_articles
+from ..requests import get_sources, get_articles
 from ..models import Sources
 
-#views
+# views
+
+
 @main.route('/')
 def index():
 	'''
 	view root page function that returns the index the page and its data
 	'''
-	source= get_sources('business')
+	source = get_sources('business')
 	sports_sources = get_sources('sports')
 	technology_sources = get_sources('technology')
 	entertainment_sources = get_sources('entertainment')
 	title = "News Source website"
-    
 
-	return render_template('index.html',title = title, business = source,sports = sports_sources,technology = technology_sources,entertainment= entertainment_sources)
+	return render_template('index.html', title=title, business=source, sports=sports_sources, technology=technology_sources, entertainment=entertainment_sources)
+
 
 @main.route('/articles/<id>')
 def source(id):
 	'''
-	view articles 
+	view articles
 	'''
-	articles = get_articles(id)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
- 
+	articles = get_articles(id)
+   
 
-	return render_template('articles.html',articles = articles)
+	return render_template('articles.html', id=id, articles=articles)
