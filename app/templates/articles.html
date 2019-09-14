@@ -8,7 +8,8 @@
     <div class="row">
         {%for article in articles %}
        
-        <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details"> -->
+        <div class="col-md-4">
+            
             <h3>{{ article.title }}</h3>
 
             <p class="overview"> {{article.description}}</p>
@@ -16,6 +17,7 @@
             <a href="{{article.url}}">Read More</a>
             <p>Pulished at :{{article.date}}</p>
         {%endfor%}
+        </div>
         </div>
 
 </div>

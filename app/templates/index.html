@@ -1,63 +1,30 @@
-<!-- <h1> Hello World </h1>
-<html>
-<title>welcome</title> -->
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{sources.title}}</title>
+</head>
 {% extends 'base.html'%}
-<!-- Styles block -->
+{% import 'macros.html'as macro%}
+
+<body>
+    
+
+
+
 {%block content%}
-{% block styles%}
-
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-{% endblock %}
-<!-- Content block -->
-      <h3> sources</h3>
-      <ul>
-         {% for source in business %}
-            <li>{{source.name}}</li>
-            <li>{{source.description}}</li>
-            <li>{{source.category}}</li>
-            <li>{{source.country}}</li>
-            <li>{{source.language}}</li>
-            <li><a href="/articles/{{source.id}}"> view{{ source.name}}</a></li>
-         {% endfor %}
-     </ul>
-
-   
-     <h3> Sport</h3>
-      <ul>
-            {% for sports_sources in sports %}
-            <li>{{sports_sources.name}}</li>
-            <li>{{sports_sources.description}}</li>
-            <li>{{sports_sources.category}}</li>
-            <li>{{sports_sources.country}}</li>
-            <li>{{sports_sources.language}}</li>
-         {% endfor %}
-     </ul>
-  
-     <h3>technology</h3>
-      <ul>
-        {% for technology_sources in technology %}
-         <li>{{technology_sources.name}}</li>
-         <li>{{technology_sources.description}}</li>
-         <li>{{technology_sources.category}}</li>
-         <li>{{technology_sources.country}}</li>
-         <li>{{technology_sources.language}}</li>
-         {% endfor %}
-     </ul>
- 
-    <h3>Entertainment</h3>
-     <ul>
-            {% for entertainment_sources in entertainment %}
-       
-            <li>{{entertainment_sources.name}}</li>
-            <li>{{entertainment_sources.description}}</li>
-            <li>{{entertainment_sources.category}}</li>
-            <li>{{entertainment_sources.country}}</li>
-            <li>{{entertainment_sources.language}}</li>
-          
-        {% endfor %}
-
-
-</ul>
-{% endblock %}
+<div class="contaoner">
+    <h3>business</h3>
+    {{ macro.displaySourceList(sources)}}
+    <h3>technology</h3>
+    {{ macro.displaySourceList(technology)}}
+    <h3>sport</h3>
+    {{ macro.displaySourceList(sports)}}
+    <h3>Entertainment news</h3>
+    {{ macro.displaySourceList(entertainment)}}
+</div>
+{%endblock%}  
+</body>
+</html>
