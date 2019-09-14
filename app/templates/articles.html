@@ -5,13 +5,12 @@
 <div class="container">
     <div class="row">
         {%for article in articles %}
-       
         <div class="col-md-4">
             <div class="thumbnail">
             <h3>{{ article.title }}</h3>
 
             <p class="overview"> {{article.description}}</p>
-            <p><img src="{{article.urlToImage}}"></p>
+            <p><img src="{{article.urlToImage}}"class="img-fluid"></p>
             <a href="{{article.url}}">Read More</a>
             <p>Pulished at :{{article.date}}</p>
         {%endfor%}
