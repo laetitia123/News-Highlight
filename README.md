@@ -3,7 +3,9 @@
 ##
 ## Description
   
-
+This is a webapp thatwill help you to view heightling news  according category.
+you  will see the heading news source and when you  click on the view articles you are able
+to see the all article related to that source
 
 ## BDD
 

@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+
+    
 </head>
 {% extends 'base.html'%}
 {% import 'macros.html'as macro%}
 
-<body>
+<body >
+       
 {%block content%}
-
+<div style="background-color:whitesmoke ">
 <div class="container">
-<h1>WELCOME TO NEWS HIGLIGHT </h1>
-   
-    <h3>technology</h3>
+<!-- <h1 class="text-center font-weight-bold text-uppercase;font-family: Georgia, 'Times New Roman', Times, serif">WELCOME TO NEWS HIGLIGHT </h1> -->
+ 
+
+
+    <h3 style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;border-bottom: 2px solid white;margin-bottom:24px;font-size:45px;">Technology News</h3>
     {{ macro.displaySourceList(technology)}}
-    <h3>sport</h3>
+    <h3  style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;border-bottom: 2px solid white;margin-bottom:24px;font-size:45px;">Sport News</h3>
     {{ macro.displaySourceList(sports)}}
-    <h3 class="text-center">business</h3>
+    <h3 style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;border-bottom: 2px solid white;margin-bottom:24px;font-size:45px;">Business News</h3>
     {{ macro.displaySourceList(business)}}
-    <h3>Entertainment news</h3>
+    <div class="example z-depth-5">
+    <h3  style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;text-transform: capitalize;border-bottom: 2px solid white;margin-bottom:24px;font-size:45px;">Entertainment news</h3>
     {{ macro.displaySourceList(entertainment)}}
+   </div>
 </div>
-{%endblock%}  
+</div>
+{%endblock%}
+  
 </body>
 </html>
