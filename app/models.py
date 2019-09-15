@@ -18,13 +18,13 @@ class Articles:
     Movie class to arcticles Objects
     '''
 
-    def __init__(self,id,author,title,description,url,content,urlToImage,date):
+    def __init__(self,id,author,title,description,url,content,urlToImage,publishedAt):
         self.id =id
         self.author= author
         self.description = description
         self.title = title
         self.content=content
         self.url=url
-        self.date=date
+        self.publishedAt=publishedAt
         self.urlToImage=urlToImage
                

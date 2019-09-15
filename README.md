@@ -33,6 +33,8 @@ to see the all article related to that source
 ## Technologies Used
 
     *paython3.6
+    *Flask
+    *Boostrap
    
 
 ## Support and contact details

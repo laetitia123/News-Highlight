@@ -99,10 +99,10 @@ def process_articles(articles_list):
         url = article_item.get('url')
         content = article_item.get('content')
         urlToImage = article_item.get('urlToImage')
-        date = article_item.get('date')
+        publishedAt = article_item.get('publishedAt')
         if urlToImage:
           articles_object = Articles(
-            id, author, title, description, url, content, urlToImage, date)
+            id, author, title, description, url, content, urlToImage,publishedAt)
 
         articles_results.append(articles_object)
 
