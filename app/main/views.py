@@ -1,31 +1,3 @@
-# from flask import render_template,request,redirect,url_for
-# from . import main
-# from ..requests import get_sources,get_sources
-# # from .forms import ReviewForm
-# # from ..models import Review
-
-# # Views
-# # @main.route('/')
-# # def index():
-
-# #     '''
-# #     View root page function that returns the index page and its data
-# #     '''
-# #     return render_template('index.html')
-
-
-# @main.route('/')
-# def index():
-
-#     '''
-#     View root page function that returns the index page and its data
-#     '''
-
-#     # Getting popular movie
-#     sources = get_source(source)
-#     print(sources)
-#     title = 'Home - Welcome to The best Movie Review Website Online'
-#     return render_template('index.html', title = title,source=sources)
 
 
 from flask import render_template, request, redirect, url_for

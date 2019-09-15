@@ -1,25 +1,38 @@
 {% extends 'base.html'%}
-<!-- {% import 'macros.html'as macro%} -->
-{% block content %}
+{% block content%}
 <div class="container">
-        <div class = "row">
+
+	<!-- Popular movie section  -->
+        <h3> WELCOME TO ARTICLES </h3>
+        {% for article_row in articles | batch(3)%}
+	        <div class="row">
+		        {% for article in article_row %}
+		        	<div class="col-md-4">
+				        <div class="thumbnail">
+				              <h3>{{article.title}}</h3>
+						      <img src="{{article.urlToImage}}"  class="img-responsive"style="height:250px" >
+						      <div class="me">
+						        <p>{{article.description | truncate(80)}}</p>
+						        <a href="{{article.url}}" target="_blank"> <button class="btn btn-primary">read more</button></a>
+ 
+						      </div>
+						    
+						      Published At: {{article.date}}
+						      
+							
+	  					</div>
+
+
+			     	</div>
+			     	
+		        {% endfor %}
+	        
+	        </div>
+         
+        {% endfor %}
         
-        <div class = "col-xs-3 col-sm-3 col-md-3 col-lg-3 articles-card">
-            <div class="thumbnail">
-                {%for article in articles %}
-            
-             <h3>{{ article.title }}</h3>
-
-            <p class="overview"> {{article.description}}</p>
-            <p><img src="{{article.urlToImage}}" class="img-responsive"></p>
-            <a href="{{article.url}}"><button class="btn btn-primary">READ MORE</button></a>
-            <p>Pulished at :{{article.date}}</p>
-      
-       
-        {%endfor%}
-        </div>
-        </div>
-        </div>
-
+	
 </div>
-{% endblock %}
+
+
+{%endblock%}
